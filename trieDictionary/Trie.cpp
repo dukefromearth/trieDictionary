@@ -150,7 +150,7 @@ bool StringTrie::traverse(TrieNode* &root, const std::string& s, bool create)
 			else
 				return false;
 		}
-        root = root->children[index]; //todo: goes out of scope?
+        root = root->children[index];
 	}
 	return true;
 }

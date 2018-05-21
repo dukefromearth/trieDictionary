@@ -1,7 +1,7 @@
 #include "dictionary.h"
 
 void Dictionary::load(std::string file){
-    //dictionary_.clear();
+    dictionary_.clear();
     dictionary_ = StringTrie(file);
 }
 
