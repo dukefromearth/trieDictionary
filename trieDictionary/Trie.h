@@ -11,7 +11,7 @@ struct TrieNode
     TrieNode* parent;
     int index;
 	TrieNode* children[SIZE];
-	bool endOfWord = false;
+	bool endOfWord;
 	TrieNode();
     TrieNode(TrieNode* p, int i);
 };

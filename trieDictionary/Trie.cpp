@@ -169,14 +169,14 @@ TrieNode* StringTrie::getNode(std::string s){
 std::string reverseString(std::string s){
     std::string newString = "";
     if (s.length() > 0){
-        for (int i=s.length()-1; i>=0; --i){
+        for (int i=(int)s.length()-1; i>=0; --i){ //typecast to make compiler stfu
             newString += s[i];
         }
     }
     return newString;
 }
 
-//crawls up from child to parent from beginning to end of word
+//crawls up from child to parent, returns string from root to leaf
 std::string crawlUp(TrieNode* startOfWord, TrieNode* endOfWord){
     std::string word;
     char letter = 0;
