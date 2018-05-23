@@ -161,6 +161,7 @@ TrieNode* StringTrie::getNode(std::string s){
     for (int i=0; i<s.length(); ++i){
         int index = s[i] - 'a';
         toGet = toGet->children[index];
+        if (!toGet) return nullptr;
     }
     return toGet;
 }
@@ -196,6 +197,7 @@ std::vector<std::string> StringTrie::getSuffix(std::string prefix)
     std::queue <TrieNode*> myQueue;
     std::vector <std::string> vec;
     TrieNode* root = getNode(prefix);
+    if (!root) return vec;
     
     myQueue.push(root);
     while(!myQueue.empty())

@@ -15,6 +15,8 @@ int Dictionary::numWords(){
 
 void Dictionary::suggest(std::string s, int n){
     std::vector<std::string> suggestions = dictionary_.getSuffix(s);
+    if (suggestions.size() < n)
+        n = suggestions.size();
     for (int i=0; i < n; ++i){
         std::cout << suggestions[i] << std::endl;
     }
