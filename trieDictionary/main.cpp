@@ -2,8 +2,7 @@
 #include "dictionary.h"
 
 int main(){
-    Dictionary dic("/Users/stephenduke/Documents/School/trieDictionary/trieDictionary/words.txt");
-//    dic.load("/Users/stephenduke/Documents/School/trieDictionary/trieDictionary/words.txt");
+    Dictionary dic("words.txt");
     dic.suggest("car", 10);
     std::cout << std::endl;
     dic.suggest("adf", 10);
